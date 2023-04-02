@@ -75,8 +75,8 @@ public class Main {
     }
 
     public static List<Employee> parseXML(String fileName) throws ParserConfigurationException, IOException, SAXException {
-        List<Employee> employees = new ArrayList<Employee>();
-        Employee employee = null;
+        List<Employee> employees = new ArrayList();
+        Employee employee = new Employee();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document doc = builder.parse(new File(fileName));
@@ -92,7 +92,6 @@ public class Main {
                 employee.setLastName(element.getElementsByTagName("lastName").item(0).getTextContent());
                 employee.setCountry(element.getElementsByTagName("country").item(0).getTextContent());
                 employee.setAge(Integer.parseInt(element.getElementsByTagName("age").item(0).getTextContent()));
-
 
                 employees.add(employee);
             }

@@ -17,27 +17,22 @@ public class Employee {
     }
 
     public void setFirstName(String firstName) {
-        firstName = "John";
-        firstName = "Ivan";
+        this.firstName = firstName;
     }
 
     public void setLastName(String lastName) {
-        lastName = "Smith";
-        lastName = "Petrov";
+        this.lastName = lastName;
     }
 
     public void setId(long id) {
-        id = 1;
-        id = 2;
+      this.id = id;
     }
 
     public void setCountry(String country) {
-        country = "USA";
-        country = "RU";
+        this.country = country;
     }
 
     public void setAge(int age) {
-        age = 25;
-        age = 23;
+        this.age = age;
     }
 }
